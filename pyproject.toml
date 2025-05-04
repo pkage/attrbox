@@ -39,6 +39,8 @@ optional-dependencies = { dev = [
   "pytest",
   "ruff",
   "cogapp",
+], xml = [
+  "xmltodict"
 ] }
 readme = "README.md"
 license = "MIT"
