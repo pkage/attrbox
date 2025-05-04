@@ -17,13 +17,13 @@ from . import xml
 from ._vendor.docopt import docopt
 from .attrdict import AttrDict
 
-# TODO 2026-10-31 @ py3.10 EOL: remove conditional
+# TODO 2026-10-31 @ py3.10 EOL: remove conditional and pyright
+# pyright: reportMissingImports=false
 if sys.version_info >= (3, 11):  # pragma: no cover
     import tomllib as toml
 else:  # pragma: no cover
     # the line-level comment does not work, so we have to use file-level
     # which is gross
-    # pyright: reportMissingImports=false
     import tomli as toml
 
 PYTHON_KEYWORDS: Sequence[str] = """

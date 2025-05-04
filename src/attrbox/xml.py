@@ -53,6 +53,7 @@ def load(file: SupportsRead, /) -> Dict[str, Any]:
         ModuleNotFoundError: raised if the [xml] extra is not installed.
 
     Examples:
+        >>> from pathlib import Path
         >>> root = Path(__file__).parent.parent.parent
         >>> load((root / "test/config_4.xml").open())
         {'section': {'key': 'value4', 'xml': 'loaded'}}
