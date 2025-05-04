@@ -13,6 +13,9 @@ import sys
 if sys.version_info >= (3, 11):
     import tomllib as toml
 else:
+    # the line-level comment does not work, so we have to use file-level
+    # which is gross
+    # pyright: reportMissingImports=false
     import tomli as toml
 # no cover: stop
 

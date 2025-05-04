@@ -21,6 +21,9 @@ from .attrdict import AttrDict
 if sys.version_info >= (3, 11):  # pragma: no cover
     import tomllib as toml
 else:  # pragma: no cover
+    # the line-level comment does not work, so we have to use file-level
+    # which is gross
+    # pyright: reportMissingImports=false
     import tomli as toml
 
 PYTHON_KEYWORDS: Sequence[str] = """
